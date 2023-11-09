@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\ThreadSynchronization\x64\Debug\ThreadSynchronization.exe
+C:\Users\Admin\source\repos\3.ThreadSynchronization\x64\Debug\ThreadSynchronization.exe

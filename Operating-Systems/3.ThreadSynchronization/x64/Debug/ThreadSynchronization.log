@@ -1,0 +1,9 @@
+﻿  Source.cpp
+C:\Users\Admin\source\repos\3.ThreadSynchronization\Source.cpp(82,8): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Admin\source\repos\3.ThreadSynchronization\Source.cpp(84,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Admin\source\repos\3.ThreadSynchronization\Source.cpp(112,18): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  ThreadSynchronization.vcxproj -> C:\Users\Admin\source\repos\3.ThreadSynchronization\x64\Debug\ThreadSynchronization.exe

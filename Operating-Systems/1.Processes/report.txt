@@ -1,0 +1,4 @@
+Binary file name is: bin.txt
+1 A 3 12
+2 B 4 16
+0 B 0 0

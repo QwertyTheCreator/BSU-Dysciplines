@@ -1,0 +1,6 @@
+﻿  Main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 123 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  2 Thread.vcxproj -> C:\Users\Admin\source\CSprojects\2 Thread\x64\Release\2 Thread.exe

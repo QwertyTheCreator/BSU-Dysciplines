@@ -1,0 +1,7 @@
+Binary file name is: bin.txt
+1 Alex 3 69
+1 Alex 3 69
+1 Alex 3 69
+1 Alex 3 69
+1 Alex 3 69
+0 Alex 0 0
