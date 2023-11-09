@@ -1,0 +1,3 @@
+﻿  Sender.cpp
+E:\GitHub\BSU-Dysciplines\Operating-Systems\4. ProcessesSyncronization\Sender\Sender.cpp(47,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Sender.vcxproj -> E:\GitHub\BSU-Dysciplines\Operating-Systems\4. ProcessesSyncronization\Reciever\x64\Debug\Sender.exe
