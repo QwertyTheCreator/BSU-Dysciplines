@@ -1,13 +1,9 @@
-﻿using Industrial_Programming.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.IO.Compression;
-using System.Linq;
-using System.Security.Cryptography;
+﻿using System.IO.Compression;
 using System.Text;
-using System.Threading.Tasks;
+using System.Security.Cryptography;
+using IndustrialProgramming.Exceptions;
 
-namespace Industrial_Programming.Controller
+namespace IndustrialProgramming.Controller
 {
     public static class FileWorker
     {

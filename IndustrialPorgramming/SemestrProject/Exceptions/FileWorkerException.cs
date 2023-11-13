@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Industrial_Programming.Exceptions
+namespace IndustrialProgramming.Exceptions
 {
     public class FileWorkerException : Exception
     {

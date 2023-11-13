@@ -13,12 +13,16 @@ namespace IndustrialProgramming.Model
     public class MathExpression : IMathExpression
     {
         public string? EquationWithVariables { get; set; }
+
         [JsonIgnore]
         private string? EquationWithoutVariables { get; set; }
+
         [JsonIgnore]
         public List<string>? Variables { get; private set; }
+
         [JsonIgnore]
         public List<double>? VariableValues { get; set; }
+
         public double Answer { get; private set; }
 
         public MathExpression(string expression)
@@ -88,6 +92,15 @@ namespace IndustrialProgramming.Model
         private static async Task<double> Solve(string? EquationWithoutVariables)
         {
             return CSharpScript.EvaluateAsync<double>(EquationWithoutVariables).Result;
+        }
+
+        public int GetVariablesCount()
+        {
+            Regex regex = new Regex(@"\b[A-Za-z_][A-Za-z0-9_]*\b");
+
+            MatchCollection matches = regex.Matches(EquationWithVariables);
+
+            return matches.Count;
         }
     }
 }

@@ -15,17 +15,20 @@ namespace IndustrialProgramming
     {
         public static async Task Main(string[] args)
         {
-            //string key = "Очень секретный ключ";
-            //string ivSecret = "вектор";
+            string key = "Очень секретный ключ";
+            string ivSecret = "вектор";
 
             ////FileWorker.EncryptFile("C:\\TestsForIndustrialProgramming\\TXTtest.txt", "C:\\TestsForIndustrialProgramming\\TxtDecrypted.enc", key, ivSecret);
             //FileWorker.DecryptFile("C:\\TestsForIndustrialProgramming\\TxtDecrypted.enc", "C:\\TestsForIndustrialProgramming\\TxtDecrypted.xml", key, ivSecret);
 
-            //CLI.Introduction();
-            //while (true)
-            //{
-            //    CLI.UserPathInput();
-            //}
+            CLI.Introduction();
+            while (true)
+            {
+                CLI.UserPathInput();
+            }
+
+            //string path = @"D:\Temp\expr.txt";
+            // FileWorker.EncryptFile(path, @"D:\Temp\expr.enc", key, ivSecret);
         }
     }
 }

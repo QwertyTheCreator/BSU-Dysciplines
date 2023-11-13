@@ -1,5 +1,4 @@
-﻿using Industrial_Programming.Exceptions;
-using IndustrialProgramming.Exceptions;
+﻿using IndustrialProgramming.Exceptions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -66,7 +65,7 @@ namespace IndustrialProgramming.Controller
             return expressionContainer ?? throw new FileWorkerException("XML file is empty, or incorrect");
         }
 
-        public static List<string> GetExpressionFromJson(string path)
+        public static List<string> GetExpressionsFromJson(string path)
         {
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
