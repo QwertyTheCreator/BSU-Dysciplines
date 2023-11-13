@@ -1,5 +1,7 @@
 ﻿using Industrial_Programming.Exceptions;
+using IndustrialProgramming.Exceptions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +9,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Industrial_Programming.Controller
+namespace IndustrialProgramming.Controller
 {
     public static class MathExpressionParser
     {

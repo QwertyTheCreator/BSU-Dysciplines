@@ -1,20 +1,31 @@
-﻿using Industrial_Programming.Controller;
-using Industrial_Programming.Model;
-using Microsoft.CodeAnalysis.CSharp.Scripting;
+﻿using IndustrialProgramming.Controller;
+using System;
+using System.IO.Compression;
+using System.Text.Json;
 using System.Text.RegularExpressions;
+using System.Xml;
+using System.Security.Cryptography;
+using System.Text;
+using Microsoft.CodeAnalysis.CSharp.Scripting;
+using IndustrialProgramming.View;
 
-namespace Industrial_Programming
+namespace IndustrialProgramming
 {
-    public class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            string zipFilePath = @"C:\Users\Admin\source\TestForIndustrialProgramming\ZIPtest.zip";
-            string xmlFilePath = @"C:\Users\Admin\source\TestForIndustrialProgramming\XMLtest.xml";
-            string txtFilePath = @"C:\Users\Admin\source\TestForIndustrialProgramming\TXTtest.txt";
-            string jsonFilePath = @"C:\Users\Admin\source\TestForIndustrialProgramming\ToCreateZip\";
+            //string key = "Очень секретный ключ";
+            //string ivSecret = "вектор";
 
-            FileWorker.CompressFile(jsonFilePath, zipFilePath);
+            ////FileWorker.EncryptFile("C:\\TestsForIndustrialProgramming\\TXTtest.txt", "C:\\TestsForIndustrialProgramming\\TxtDecrypted.enc", key, ivSecret);
+            //FileWorker.DecryptFile("C:\\TestsForIndustrialProgramming\\TxtDecrypted.enc", "C:\\TestsForIndustrialProgramming\\TxtDecrypted.xml", key, ivSecret);
+
+            //CLI.Introduction();
+            //while (true)
+            //{
+            //    CLI.UserPathInput();
+            //}
         }
     }
 }

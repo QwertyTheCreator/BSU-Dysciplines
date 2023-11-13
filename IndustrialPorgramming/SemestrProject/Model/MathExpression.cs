@@ -1,22 +1,23 @@
 ﻿using Industrial_Programming.Interfaces;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Industrial_Programming.Model
+namespace IndustrialProgramming.Model
 {
     public class MathExpression : IMathExpression
     {
         public string? EquationWithVariables { get; set; }
+        [JsonIgnore]
         private string? EquationWithoutVariables { get; set; }
+        [JsonIgnore]
         public List<string>? Variables { get; private set; }
+        [JsonIgnore]
         public List<double>? VariableValues { get; set; }
         public double Answer { get; private set; }
 
@@ -66,8 +67,14 @@ namespace Industrial_Programming.Model
                 });
         }
 
-        public void SetVariables(double[] variablesValues)
+        public void SetVariables(double[]? variablesValues)
         {
+            if (variablesValues is null)
+            {
+                EquationWithoutVariables = EquationWithVariables;
+                return;
+            }
+
             FillVariablesValues(variablesValues);
 
             CreateEquationWithoutVariables();
