@@ -5,7 +5,7 @@
 void EnterOption(int& key, std::istream& is = std::cin, std::ostream& os = std::cout)
 {
 link:
-	std::cout << "EventWasStarted";
+	std::cout << "\nEventWasStarted\n\n";
 	std::cout << "Choose options:\n";
 	std::cout << "1. Write message\n";
 	std::cout << "2. Exit process\n";

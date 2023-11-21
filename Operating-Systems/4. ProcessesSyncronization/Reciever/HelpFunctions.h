@@ -26,7 +26,7 @@ void CreateBinaryFile(const std::string& binaryFileName)
 void EnterOption(int& key, std::istream& is = std::cin, std::ostream& os = std::cout)
 {
 link:
-	std::cout << "Choose options:\n";
+	std::cout << "\nChoose options:\n";
 	std::cout << "1. Read message\n";
 	std::cout << "2. Exit process\n";
 	std::cout << "Your choice is: ";

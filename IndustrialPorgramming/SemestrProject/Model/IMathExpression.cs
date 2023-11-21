@@ -11,5 +11,7 @@ namespace Industrial_Programming.Interfaces
         void SetVariables(double[] variables);
 
         Task SolveExpression();
+
+        public int GetVariablesCount();
     }
 }
