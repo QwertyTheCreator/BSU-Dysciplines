@@ -58,7 +58,14 @@ namespace SemestrProjectUI.Models
         {
             for (int i = 0; i < Expressions.Count; i++)
             {
-                await Expressions[i].SolveExpression();
+                try
+                {
+                    await Expressions[i].SolveExpression();
+                }
+                catch
+                {
+                    continue;
+                }
             }
         }
     }

@@ -18,10 +18,12 @@ namespace SemestrProjectUI.Models
         [JsonIgnore]
         public List<double>? VariableValues { get; set; }
 
-        public double Answer { get; private set; }
+        public double? Answer { get; private set; }
 
         public MathExpression(string expression)
         {
+            Answer = null;
+
             EquationWithVariables = expression;
 
             DetectVariables();
@@ -86,7 +88,14 @@ namespace SemestrProjectUI.Models
 
         private static async Task<double> Solve(string? EquationWithoutVariables)
         {
-            return CSharpScript.EvaluateAsync<double>(EquationWithoutVariables).Result;
+            try
+            {
+                return CSharpScript.EvaluateAsync<double>(EquationWithoutVariables).Result;
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
         }
 
         public int GetVariablesCount()
