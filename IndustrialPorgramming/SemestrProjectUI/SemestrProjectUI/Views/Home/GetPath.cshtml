@@ -1,0 +1,16 @@
+﻿@model SemestrProjectUI.Models.OutputResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<body>
+    <form class="p-a-1" asp-action="GetPath" method="post">
+        <label asp-for="Path">Введите путь к файлу:</label><br>
+        <input type="text" id="filePath" name="filePath" value=""><br>
+        <input type="submit" value="Получить путь">
+    </form>
+</body>
+</html>
+

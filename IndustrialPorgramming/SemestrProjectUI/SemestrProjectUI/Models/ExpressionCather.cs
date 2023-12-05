@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace SemestrProjectUI.Models
 {
-    public class ExpressionCather
+    public static class ExpressionCather
     {
         public static MathExpressionContainer? Container { get; private set; }
 

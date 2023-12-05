@@ -1,1 +1,3 @@
-﻿  4 ProcessesSynchronization.vcxproj -> D:\GitHub\BSU-Dysciplines\Operating-Systems\4. ProcessesSyncronization\Reciever\x64\Debug\Receiver.exe
+﻿  Receiver.cpp
+D:\GitHub\BSU-Dysciplines\Operating-Systems\4. ProcessesSyncronization\Reciever\Receiver.cpp(28,57): warning C4244: аргумент: преобразование "__int64" в "LONG", возможна потеря данных
+  4 ProcessesSynchronization.vcxproj -> D:\GitHub\BSU-Dysciplines\Operating-Systems\4. ProcessesSyncronization\Reciever\x64\Debug\Receiver.exe
