@@ -12,8 +12,8 @@
 
     public class OutputResponse
     {
-        public string? Path { get; set; }
-        public string? outPath { get; set; }
+        public string? StarterPath { get; set; }
+        public string? DestinationPath { get; set; }
 
         public Format? fileFormat { get; set; }
 

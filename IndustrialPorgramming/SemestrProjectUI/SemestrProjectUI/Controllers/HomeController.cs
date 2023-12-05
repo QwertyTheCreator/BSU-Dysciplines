@@ -18,39 +18,44 @@ namespace SemestrProjectUI.Controllers
             _logger = logger;
         }
 
-        public ViewResult Index()
+        public IActionResult Index()
         {
+            Console.WriteLine("MyView");
             return View("MyView");
         }
 
         [HttpGet]
-        public ViewResult GetPath()
+        public IActionResult GetPath()
         {
+            Console.WriteLine("GetPathView");
             return View();
         }
 
         [HttpPost]
-        public ViewResult GetPath(string path)
+        public IActionResult GetPath(OutputResponse? outputResponse)
         {
 
-            if (!System.IO.File.Exists(path))
+            if (!System.IO.File.Exists(outputResponse?.StarterPath))
             {
                 return View("ErrorView");
             }
+
+            _inputPath = outputResponse?.StarterPath;
 
             return View("CreatePath");
         }
 
         [HttpGet]
-        public ViewResult CreatePath()
+        public IActionResult CreatePath()
         {
+            Console.WriteLine("CreatePathView");
             return View();
         }
 
         [HttpPost]
-        public ViewResult CreatePath(OutputResponse response)
+        public async Task<IActionResult> CreatePath(OutputResponse response)
         {
-            ExpressionCather.GetExpressionsFromFile(_inputPath
+            ExpressionCather.GetExpressionsFromFile(response.StarterPath
                 ?? throw new ArgumentNullException());
 
             if (response == null)
@@ -58,13 +63,14 @@ namespace SemestrProjectUI.Controllers
                 return View();
             }
 
-            CreateAnswerFile(response, ExpressionCather.Container!);
+            await CreateAnswerFile(response, ExpressionCather.Container!);
 
             return View("Thanks");
         }
 
-        private void CreateAnswerFile(OutputResponse response, MathExpressionContainer expressions)
+        private async Task CreateAnswerFile(OutputResponse response, MathExpressionContainer expressions)
         {
+            await expressions.SolveAll();
             bool isCorrect = false;
 
             string buffer = "C:/Buffer";
@@ -109,7 +115,7 @@ namespace SemestrProjectUI.Controllers
             string _ivSecret = "вектор";
             //Доделать вывод
             string? answerName = response.AnswerName;
-            string? folderPath = response.outPath;
+            string? folderPath = response.DestinationPath;
             switch (response.format)
             {
                 case ZipEncFormat.FirstZipThenEnc:
@@ -141,6 +147,7 @@ namespace SemestrProjectUI.Controllers
                     break;
 
                 default:
+                    System.IO.File.Copy(buffer + fileName + extencion, folderPath + answerName + extencion);
                     break;
             }
 

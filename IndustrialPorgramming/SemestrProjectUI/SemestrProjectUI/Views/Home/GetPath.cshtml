@@ -1,15 +1,23 @@
-﻿@model SemestrProjectUI.Models.OutputResponse
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SemestrProjectUI.Models.OutputResponse
 @{
     Layout = null;
 }
 <!DOCTYPE html>
 
 <html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
 <body>
     <form class="p-a-1" asp-action="GetPath" method="post">
-        <label asp-for="Path">Введите путь к файлу:</label><br>
-        <input type="text" id="filePath" name="filePath" value=""><br>
-        <input type="submit" value="Получить путь">
+        <div class="form-group">
+            <label asp-for="StarterPath">Path to file:</label>
+            <input class="form-control" asp-for="StarterPath" />
+        </div>
     </form>
 </body>
 </html>

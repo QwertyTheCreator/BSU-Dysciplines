@@ -37,6 +37,7 @@ namespace SemestrProjectUI.Models
             MatchCollection matches = regex.Matches(EquationWithVariables);
             if (matches.Count > 0)
             {
+                Variables = new List<string>();
                 foreach (Match match in matches)
                 {
                     Variables.Add(match.Value);
@@ -46,7 +47,7 @@ namespace SemestrProjectUI.Models
 
         private void FillVariablesValues(double[] variablesValues)
         {
-            for (int i = 0; i < Variables.Count; i++)
+            for (int i = 0; i < Variables?.Count; i++)
             {
                 VariableValues.Add(variablesValues[i]);
             }
