@@ -13,6 +13,8 @@ namespace IndustrialProgramming.View
     {
         private static string? _path;
         private static MathExpressionContainer? expressions;
+        private static string _key = "Очень секретный ключ";
+        private static string _ivSecret = "вектор";
 
         public static void Introduction()
         {
@@ -101,7 +103,14 @@ namespace IndustrialProgramming.View
         {
             bool isCorrect = false;
 
+            string buffer = "C:/Buffer";
+            string extBuffer = "C:/Buffer";
+            Directory.CreateDirectory(buffer);
+            buffer += "/";
+
             int extencionKey;
+            string fileName = "Asnwer";
+            string? extencion = null;
             while (!isCorrect)
             {
                 Console.WriteLine("Введите в каком формате вы бы хотели получить ответ:");
@@ -109,20 +118,34 @@ namespace IndustrialProgramming.View
                 Console.WriteLine("2. .xml");
                 Console.WriteLine("3. .json");
 
-                extencionKey = Int32.Parse(Console.ReadLine());
+                try
+                {
+                    extencionKey = Int32.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Неправильный ввод попробуй еще раз");
+                    break;
+                }
 
                 switch (extencionKey)
                 {
                     case 1:
                         isCorrect = true;
+                        extencion = ".txt";
+                        OutputWorker.CreateTxtFile(expressions, buffer + fileName + ".txt");
                         break;
 
                     case 2:
                         isCorrect = true;
+                        extencion = ".xml";
+                        OutputWorker.CreateXmlFile(expressions, buffer + fileName + ".xml");
                         break;
 
                     case 3:
                         isCorrect = true;
+                        extencion = ".json";
+                        OutputWorker.CreateJsonFile(expressions, buffer + fileName + ".json");
                         break;
 
                     default:
@@ -132,7 +155,7 @@ namespace IndustrialProgramming.View
             }
 
             isCorrect = false;
-            int compresAndDecompesKey;
+            int compresAndDecompesKey = 0;
             while (!isCorrect)
             {
                 Console.WriteLine("Выберите в какои формате вы бы хотели получить итоговый ответ:");
@@ -142,7 +165,8 @@ namespace IndustrialProgramming.View
                 Console.WriteLine("4. Только архивирован");
                 Console.WriteLine("5. Не производить дополнительных действий");
 
-                compresAndDecompesKey = Int32.Parse(Console.ReadLine());
+                string? answ = Console.ReadLine();
+                compresAndDecompesKey = Int32.Parse(answ);
 
                 switch (compresAndDecompesKey)
                 {
@@ -172,17 +196,69 @@ namespace IndustrialProgramming.View
                 }
             }
 
-            link: 
+        link:
             Console.WriteLine("Введите полный путь до папки в которой вы хотите получить ответ(В конце обязательно должен быть слеш):");
             string? folderPath = Console.ReadLine();
 
-            if(folderPath is null || !Directory.Exists(folderPath))
+            if (folderPath is null || !Directory.Exists(folderPath))
             {
                 Console.WriteLine("Неправильный путь, попробуй еще");
                 goto link;
             }
             //Доделать вывод
-            
+
+            Console.WriteLine("Введите название итогового файла, без расширения");
+            string? answerName;
+            while (true)
+            {
+                answerName = Console.ReadLine();
+                if (answerName is null)
+                {
+                    Console.WriteLine("Неправильный ввод, попробуй еще раз:");
+                    continue;
+                }
+
+                break;
+            }
+
+            switch (compresAndDecompesKey)
+            {
+                case 1:
+                    string newBuf = "C:/newBuf";
+                    Directory.CreateDirectory(newBuf);
+                    FileWorker.CompressFile(extBuffer, newBuf + "/zipped.zip");
+                    FileWorker.EncryptFile(newBuf + "/zipped.zip", folderPath + answerName + ".enc", _key, _ivSecret);
+                    Directory.Delete(newBuf, true);
+                    break;
+
+                case 2:
+                    string newBuffer = "C:/NewBuffer";
+                    Directory.CreateDirectory(newBuffer);
+                    FileWorker.EncryptFile(buffer + fileName + extencion, newBuffer + "/encrypted.enc", _key, _ivSecret);
+                    FileWorker.CompressFile(newBuffer, folderPath + answerName + ".zip");
+
+                    Directory.Delete(newBuffer, true);
+                    break;
+
+                case 3:
+                    FileWorker.EncryptFile(buffer + fileName + extencion, folderPath + answerName + ".enc", _key, _ivSecret);
+                    break;
+
+                case 4:
+                    FileWorker.CompressFile(extBuffer, folderPath + answerName + ".zip");
+                    break;
+
+                case 5:
+                    File.Copy(buffer + fileName + extencion, folderPath + answerName + extencion);
+                    break;
+
+                default:
+                    break;
+            }
+
+            Console.WriteLine("Всё выполнено успешно, проверяйте файл");
+
+            Directory.Delete(extBuffer, true);
         }
     }
 }

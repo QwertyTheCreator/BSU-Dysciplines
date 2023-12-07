@@ -34,6 +34,7 @@ namespace IndustrialProgramming.Controller
                     break;
 
                 case ".enc":
+                    Container = GetExpressionsFromEnc(_path);
                     break;
 
                 default:
