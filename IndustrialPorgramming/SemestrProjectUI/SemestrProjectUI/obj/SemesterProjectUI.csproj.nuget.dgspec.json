@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemestrProjectUI.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemestrProjectUI.csproj": {
+    "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemestrProjectUI.csproj",
-        "projectName": "SemestrProjectUI",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemestrProjectUI.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
+        "projectName": "SemesterProjectUI",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\obj\\",
         "projectStyle": "PackageReference",
