@@ -17,7 +17,7 @@ namespace SemesterProjectUI.Models.Equations
             }
             catch
             {
-                throw new DivideByZeroException("Деление на 0");
+                Answer = Double.PositiveInfinity;
             }
         }
 

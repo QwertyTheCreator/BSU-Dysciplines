@@ -6,7 +6,7 @@ namespace SemesterProjectUI.Models.Creators
     {
         public void Create(EquationsDirector equations, string path)
         {
-            var expressions = equations.Equations.ToList();
+            var expressions = equations.Equations!.ToList();
 
             using (StreamWriter writer = new StreamWriter(path, false))
             {

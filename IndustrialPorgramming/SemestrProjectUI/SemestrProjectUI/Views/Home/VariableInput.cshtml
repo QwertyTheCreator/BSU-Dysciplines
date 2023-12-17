@@ -1,0 +1,44 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SemesterProjectUI.Models.Responses.VariableResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <title>VariableInput</title>
+</head>
+<body>
+    <h2>Here is the list of equations needed to input variables</h2>
+    <form class="p-a-1" asp-action="VariableInput" method="put">
+        <div asp-validation-summary="All"></div>
+        @for (var i = 0; i < Model.equations?.Equations!.Count; i++)
+        {
+            var r = Model.equations?.Equations![i];
+            if (r!.VariablesCount > 0)
+            {
+                <h>@r.Equation</h>
+
+                var values = new List<double>();
+                for(int j = 0; j < r.VariablesCount; j++)
+                {
+                    <div class="form-group">
+                        <label asp-for="variablesValues![i]![j]">Variable @(j + 1):</label>
+                        <input class="form-control" asp-for="variablesValues![i]![j]" />
+                    </div>
+                }
+            }
+        }
+
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">
+                Submit response
+            </button>
+        </div>
+    </form>
+</body>
+</html>

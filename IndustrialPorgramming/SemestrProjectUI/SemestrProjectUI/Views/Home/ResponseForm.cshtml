@@ -1,0 +1,61 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SemesterProjectUI.Models.Responses.InputForm
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ResponseForm</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>ResponseForm</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="ResponseForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="StarterPath">Starter path:</label>
+                    <input class="form-control" asp-for="StarterPath" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="DirectPath">Directory folder:</label>
+                    <input class="form-control" asp-for="DirectPath" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnswerName">Name of Answer:</label>
+                    <input class="form-control" asp-for="AnswerName" />
+                </div>
+                <div class="form-group">
+                    <label>Which format do you want?</label>
+                    <select class="form-control" asp-for="AnswerFormat">
+                        <option value="">Which format do you want?</option>
+                        <option value="0">XML</option>
+                        <option value="1">TXT</option>
+                        <option value="2">JSON</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Do you want to do something else with file?</label>
+                    <select class="form-control" asp-for="AdditionalOutputFormat">
+                        <option value="">Do you want to do something else with file?</option>
+                        <option value="0">Encrypt file</option>
+                        <option value="1">Archive File</option>
+                        <option value="2">Archive then ecnrypt</option>
+                        <option value="3">Encrypt then archive</option>
+                        <option value="4">None</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Submit response
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

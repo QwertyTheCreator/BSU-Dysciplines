@@ -23,7 +23,7 @@ namespace SemesterProjectUI.Models.Parsers
                  strEquations = expressionContainer.ToList();
             }
             
-            var equations = Converter.FromStringToBaseEquation(strEquations);
+            var equations = Converter.FromStringToIBaseEquation(strEquations);
 
             return new EquationsDirector(equations);
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj": {}
+    "E:\\GitHub\\BSU-Dysciplines\\IndustrialPorgramming\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj": {
+    "E:\\GitHub\\BSU-Dysciplines\\IndustrialPorgramming\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
+        "projectUniqueName": "E:\\GitHub\\BSU-Dysciplines\\IndustrialPorgramming\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
         "projectName": "SemesterProjectUI",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
+        "projectPath": "E:\\GitHub\\BSU-Dysciplines\\IndustrialPorgramming\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\RefactoredSemestrProject\\SemestrProjectUI\\SemestrProjectUI\\obj\\",
+        "outputPath": "E:\\GitHub\\BSU-Dysciplines\\IndustrialPorgramming\\SemestrProjectUI\\SemestrProjectUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

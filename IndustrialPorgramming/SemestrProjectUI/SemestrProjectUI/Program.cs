@@ -1,3 +1,6 @@
+using SemesterProjectUI.Services.ExpressionsServices;
+using SemesterProjectUI.Services.OutputServices;
+
 namespace SemesterProjectUI
 {
     public class Program
@@ -7,8 +10,8 @@ namespace SemesterProjectUI
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllersWithViews();
-            //builder.Services.AddTransient<IAnswerService, AnswerService>();
-            //builder.Services.AddTransient<IExpressionsService, ExpressionService>();
+            builder.Services.AddTransient<IEquationService, EquationService>();
+            builder.Services.AddTransient<IOutputService, OutputService>();
 
             var app = builder.Build();
 

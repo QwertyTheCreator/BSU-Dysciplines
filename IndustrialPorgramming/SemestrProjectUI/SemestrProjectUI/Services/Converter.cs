@@ -6,9 +6,9 @@ namespace SemesterProjectUI.Services
 {
     public static class Converter
     {
-        public static List<BaseEquation> FromStringToBaseEquation(List<string> strEq)
+        public static List<IBaseEquation> FromStringToIBaseEquation(List<string> strEq)
         {
-            var equations = new List<BaseEquation>();
+            var equations = new List<IBaseEquation>();
             foreach (var str in strEq)
             {
                 equations.Add(new ScriptEquation(str));

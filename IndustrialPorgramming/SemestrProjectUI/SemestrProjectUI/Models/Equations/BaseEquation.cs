@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace SemesterProjectUI.Models.Equations
 {
-    public abstract class BaseEquation
+    public abstract class BaseEquation : IBaseEquation
     {
         public string? Equation { get; set; }
 

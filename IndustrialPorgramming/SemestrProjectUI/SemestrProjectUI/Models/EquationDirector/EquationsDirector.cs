@@ -4,32 +4,27 @@ namespace SemesterProjectUI.Models.EquationDirector
 {
     public class EquationsDirector
     {
-        private List<BaseEquation>? _equations;
+        public List<IBaseEquation>? Equations { get; set; }
 
-        public IEnumerable<BaseEquation> Equations
-        {
-            get
-            { 
-                return _equations!; 
-            }
-
-            private set => Equations = value;
-        }
-
-        public EquationsDirector(List<BaseEquation> equations)
+        public EquationsDirector(List<IBaseEquation> equations)
         {
             if (equations is null) throw new ArgumentNullException(nameof(equations));
 
-            this._equations = equations;
+            this.Equations = equations;
         }
 
-        public void SetVariables(List<List<double>?> variablesMatrix)
+        public void SetVariables(List<List<double>?>? variablesMatrix)
         {
-            for(var i = 0; i < variablesMatrix.Count; i++)
+            if (variablesMatrix is null)
             {
-                if(i < _equations!.Count)
+                return;
+            }
+
+            for (var i = 0; i < variablesMatrix.Count; i++)
+            {
+                if (i < Equations!.Count)
                 {
-                    _equations[i].SetVariables(variablesMatrix[i]);
+                    Equations[i].SetVariables(variablesMatrix[i]);
                 }
                 else
                 {
@@ -40,10 +35,21 @@ namespace SemesterProjectUI.Models.EquationDirector
 
         public void SolveAll()
         {
-            for (var i = 0; i < _equations!.Count; i++)
+            for (var i = 0; i < Equations!.Count; i++)
             {
-                _equations[i].Solve();
+                Equations[i].Solve();
             }
+        }
+
+        public int GetVariablesCount()
+        {
+            int count = 0;
+            foreach (var equation in Equations!)
+            {
+                count += equation.VariablesCount;
+            }
+
+            return count;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace SemesterProjectUI.Models.Parsers
                 throw new Exception("Файл пустой");
             }
 
-            var equations = Converter.FromStringToBaseEquation(expressionsContainer);
+            var equations = Converter.FromStringToIBaseEquation(expressionsContainer);
 
             return new EquationsDirector(equations);
         }

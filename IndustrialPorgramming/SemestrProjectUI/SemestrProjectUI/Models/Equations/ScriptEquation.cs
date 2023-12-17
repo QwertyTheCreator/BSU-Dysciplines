@@ -16,7 +16,7 @@ namespace SemesterProjectUI.Models.Equations
             }
             catch
             {
-                throw new DivideByZeroException();
+                Answer = Double.PositiveInfinity;
             }
         }
     }

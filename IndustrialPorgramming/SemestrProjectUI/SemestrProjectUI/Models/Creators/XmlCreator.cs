@@ -7,7 +7,7 @@ namespace SemesterProjectUI.Models.Creators
     {
         public void Create(EquationsDirector equations, string path)
         {
-            var baseExpressions = equations.Equations.ToList();
+            var baseExpressions = equations.Equations!.ToList();
 
             XDocument xdoc = new XDocument();
             XElement expressions = new XElement("expressions");

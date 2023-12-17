@@ -13,7 +13,7 @@ namespace SemesterProjectUI.Models.Creators
         {
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
-                JsonSerializer.Serialize<List<BaseEquation>>(fs, equations.Equations.ToList());
+                JsonSerializer.Serialize<List<IBaseEquation>>(fs, equations.Equations!.ToList());
             }
         }
     }
