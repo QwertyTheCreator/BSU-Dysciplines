@@ -14,7 +14,7 @@
 </head>
 <body>
     <h2>Here is the list of equations needed to input variables</h2>
-    <form class="p-a-1" asp-action="VariableInput" method="put">
+    <form class="p-a-1" asp-controller="Variable" asp-action="VariableInput" method="post">
         <div asp-validation-summary="All"></div>
         @for (var i = 0; i < Model.equations?.Equations!.Count; i++)
         {
@@ -34,11 +34,7 @@
             }
         }
 
-        <div class="text-center">
-            <button class="btn btn-primary" type="submit">
-                Submit response
-            </button>
-        </div>
+        <input type="submit" class="btn btn-primary" value="Fill"/>
     </form>
 </body>
 </html>

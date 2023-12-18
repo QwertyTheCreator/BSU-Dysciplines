@@ -41,54 +41,63 @@ namespace SemesterProjectUI.Services.ExpressionsServices
         private EquationsDirector GetContainerFromZip(string _path)
         {
             string buffer = @"C:\Buffer";
-            Directory.CreateDirectory(buffer);
-            Archiver.DecompressFile(_path, buffer);
-
-            string[] directories = Directory.GetDirectories(_path);
-            string innerExtension = Path.GetExtension(directories[0]);
-
-            EquationsDirector? expressions;
-
-            IParser? parser;
-            switch (innerExtension)
+            try
             {
-                case ".txt":
-                    parser = new TxtParser();
-                    expressions = parser.GetExpressions(directories[0]);
-                    break;
+                Directory.CreateDirectory(buffer);
+                Archiver.DecompressFile(_path, buffer);
 
-                case ".json":
-                    parser = new JsonParser();
-                    expressions = parser.GetExpressions(directories[0]);
-                    break;
+                string[] directories = Directory.GetFiles(buffer);
+                string innerExtension = Path.GetExtension(directories[0]);
 
-                case ".xml":
-                    parser = new XmlParser();
-                    expressions = parser.GetExpressions(directories[0]);
-                    break;
+                EquationsDirector? expressions;
 
-                case ".enc":
-                    expressions = GetExpressionsFromEnc(directories[0]);
-                    break;
+                IParser? parser;
+                switch (innerExtension)
+                {
+                    case ".txt":
+                        parser = new TxtParser();
+                        expressions = parser.GetExpressions(directories[0]);
+                        break;
 
-                default:
-                    throw new Exception("Нет поддерживаемых расширений внутри .zip файла");
+                    case ".json":
+                        parser = new JsonParser();
+                        expressions = parser.GetExpressions(directories[0]);
+                        break;
+
+                    case ".xml":
+                        parser = new XmlParser();
+                        expressions = parser.GetExpressions(directories[0]);
+                        break;
+
+                    case ".enc":
+                        expressions = GetExpressionsFromEnc(directories[0]);
+                        break;
+
+                    default:
+                        throw new Exception("Нет поддерживаемых расширений внутри .zip файла");
+                }
+
+                return expressions;
+            }
+            finally
+            {
+                Directory.Delete(buffer, true);
             }
 
-
-            Directory.Delete(buffer);
-            return expressions;
         }
 
         private EquationsDirector GetExpressionsFromEnc(string _path)
         {
             string encBuffer = @"C:\EncBuffer";
+
             Directory.CreateDirectory(encBuffer);
 
             Crypter.DecryptFile(_path, encBuffer + @"\Decrypted.zip");
             if (IsZipEncrypted(encBuffer + @"\Decrypted.zip"))
             {
-                return GetContainerFromZip(encBuffer + @"\Decrypted.zip");
+                var result = GetContainerFromZip(encBuffer + @"\Decrypted.zip");
+                Directory.Delete(encBuffer, true);
+                return result;
             }
 
             Crypter.DecryptFile(_path, encBuffer + @"\GetFileExt.txt");
@@ -122,7 +131,6 @@ namespace SemesterProjectUI.Services.ExpressionsServices
                 default:
                     throw new ArgumentException();
             }
-
 
             Directory.Delete(encBuffer);
             return expressions;

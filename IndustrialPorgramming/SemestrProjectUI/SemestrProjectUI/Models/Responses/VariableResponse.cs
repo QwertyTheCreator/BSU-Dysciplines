@@ -8,6 +8,10 @@ namespace SemesterProjectUI.Models.Responses
 
         public List<List<double>?>? variablesValues { get; set; }
 
+        public VariableResponse() 
+        {
+        }
+
         public VariableResponse(EquationsDirector equations)
         {
             this.equations = equations;

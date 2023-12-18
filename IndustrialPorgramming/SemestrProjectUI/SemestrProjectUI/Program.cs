@@ -30,7 +30,7 @@ namespace SemesterProjectUI
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{Controller=home}/{Action=Index}/{id?}");
 
             app.Run();
         }
