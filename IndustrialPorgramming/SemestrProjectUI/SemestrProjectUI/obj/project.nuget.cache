@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yNkZkbhreq/uj02Z0l+DdlUAYznI+YoTHujM0/xTqpkeesChh8Z0aAGott1hPdapiy3n7R7B+Rfkk9/Y2sqHeQ==",
+  "dgSpecHash": "5BimhFYEBKhuxK8F6rRV6+7ymtUM7WCeMnpSOIglt/Lm4MvqrafLZlZ+eLrrEAX4NAWzuDDzFj31f+HvHjpcpQ==",
   "success": true,
-  "projectFilePath": "E:\\GitHub\\BSU-Dysciplines\\IndustrialPorgramming\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Source\\Repos\\BSU-Dysciplines\\IndustrialPorgramming\\SemestrProjectUI\\SemestrProjectUI\\SemesterProjectUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4\\microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codeanalysis.common\\4.8.0\\microsoft.codeanalysis.common.4.8.0.nupkg.sha512",

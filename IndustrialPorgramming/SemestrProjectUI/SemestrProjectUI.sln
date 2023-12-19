@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemesterProjectUI", "SemestrProjectUI\SemesterProjectUI.csproj", "{11C23346-2CA9-4C1C-B73A-F56958C1A2A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SemesterProjectUI", "SemestrProjectUI\SemesterProjectUI.csproj", "{11C23346-2CA9-4C1C-B73A-F56958C1A2A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemestrProjectUI.Tests", "SemestrProjectUI.Tests\SemestrProjectUI.Tests.csproj", "{829174D6-9B5C-4722-BC20-50B0E9CF34A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{11C23346-2CA9-4C1C-B73A-F56958C1A2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11C23346-2CA9-4C1C-B73A-F56958C1A2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11C23346-2CA9-4C1C-B73A-F56958C1A2A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829174D6-9B5C-4722-BC20-50B0E9CF34A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829174D6-9B5C-4722-BC20-50B0E9CF34A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829174D6-9B5C-4722-BC20-50B0E9CF34A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829174D6-9B5C-4722-BC20-50B0E9CF34A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,25 +17,25 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SemesterProjectUI
 build_property.RootNamespace = SemesterProjectUI
-build_property.ProjectDir = E:\GitHub\BSU-Dysciplines\IndustrialPorgramming\SemestrProjectUI\SemestrProjectUI\
+build_property.ProjectDir = C:\Users\Admin\Source\Repos\BSU-Dysciplines\IndustrialPorgramming\SemestrProjectUI\SemestrProjectUI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\GitHub\BSU-Dysciplines\IndustrialPorgramming\SemestrProjectUI\SemestrProjectUI
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Source\Repos\BSU-Dysciplines\IndustrialPorgramming\SemestrProjectUI\SemestrProjectUI
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/GitHub/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Home/Output.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPdXRwdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/GitHub/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Home/ResponseForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXNwb25zZUZvcm0uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/GitHub/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Home/StarterView.cshtml]
+[C:/Users/Admin/Source/Repos/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Home/StarterView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdGFydGVyVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/GitHub/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Home/VariableInput.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWYXJpYWJsZUlucHV0LmNzaHRtbA==
+[C:/Users/Admin/Source/Repos/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Output/Output.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3V0cHV0XE91dHB1dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Source/Repos/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Response/ResponseForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzcG9uc2VcUmVzcG9uc2VGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Source/Repos/BSU-Dysciplines/IndustrialPorgramming/SemestrProjectUI/SemestrProjectUI/Views/Variable/VariableInput.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFyaWFibGVcVmFyaWFibGVJbnB1dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -29,7 +29,8 @@ namespace SemesterProjectUI.Controllers
         public IActionResult VariableInput(VariableResponse variableResponse)
         {
             //DataBase.DataBase.variableResponse = variableResponse;
-            return RedirectToAction("Output", "Output", variableResponse);
+            DataBase.DataBase.variableResponse!.variablesValues = variableResponse.variablesValues;
+            return RedirectToAction("Output", "Output", DataBase.DataBase.variableResponse);
         }
     }
 }
